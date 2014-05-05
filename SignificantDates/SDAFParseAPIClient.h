@@ -7,14 +7,13 @@
 //
 
 #import "AFHTTPRequestOperationManager.h"
-#import "CWLSynthesizeSingleton.h"
 
 typedef void (^SuccessBlockType)(AFHTTPRequestOperation *operation, id responseObject);
 typedef void (^FailureBlockType)(AFHTTPRequestOperation *operation, NSError *error);
 
 @interface SDAFParseAPIClient : AFHTTPRequestOperationManager
 
-CWL_DECLARE_SINGLETON_FOR_CLASS(SDAFParseAPIClient)
++ (instancetype)sharedSDAFParseAPIClient;
 
 - (AFHTTPRequestOperation *)GETRequestForClass:(NSString *)className
                                     parameters:(NSDictionary *)parameters

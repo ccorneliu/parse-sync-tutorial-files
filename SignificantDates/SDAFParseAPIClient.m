@@ -14,7 +14,6 @@ static NSString * const kSDFParseAPIBaseURLString = @"https://api.parse.com/1/";
 static NSString * const kSDFParseAPIApplicationId = @"YOUR_APP_ID";
 static NSString * const kSDFParseAPIKey = @"YOUR_API_KEY";
 
-
 @implementation SDAFParseAPIClient
 
 + (instancetype)sharedSDAFParseAPIClient {
